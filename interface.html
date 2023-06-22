@@ -1,8 +1,11 @@
+<!--
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Controle de LEDs</title>
 </head>
+
 <body>
     <h1>Controle de LEDs</h1>
     <button onclick="ligarLEDs()">Ligar LEDs</button>
@@ -11,12 +14,12 @@
     <script>
         function ligarLEDs() {
             var xhr = new XMLHttpRequest();
-          
+
             xhr.open("GET", "/ligar_leds", true);
             xhr.send();
-            
-            
-            
+
+
+
         }
 
         function desligarLEDs() {
@@ -26,4 +29,40 @@
         }
     </script>
 </body>
+
+</html>
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Controle de LEDs</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <h1>Controle de LEDs</h1>
+    <div class="button-container">
+        <button onclick="ligarLEDs()">Ligar LEDs</button>
+        <button onclick="desligarLEDs()">Desligar LEDs</button>
+    </div>
+
+    <script>
+        function ligarLEDs() {
+            var xhr = new XMLHttpRequest();
+
+            xhr.open("GET", "/ligar_leds", true);
+            xhr.send();
+
+        }
+
+        function desligarLEDs() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "/desligar_leds", true);
+            xhr.send();
+        }
+    </script>
+</body>
+
 </html>
