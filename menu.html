@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Menu Inicial</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <h1>Menu Inicial</h1>
+    <div class="button-container">
+        <button onclick="controlarAutomaticamente()">Controlar LED´s Automaticamente por Horário</button>
+        <button onclick="controlarPeloSensor()">Controlar LED´s pelo Sensor</button>
+        <button onclick="controlarPorLuminosidadeEHora()">Controlar LED´s por Luminosidade e Horário</button>
+    </div>
+
+    <script>
+        function controlarAutomaticamente() {
+            // Redirecionar para a página de controle automático por horário
+            window.location.href = "controle_automatico.html";
+        }
+
+        function controlarPeloSensor() {
+            // Redirecionar para a página de controle pelo sensor
+            window.location.href = "controle_sensor.html";
+        }
+
+        function controlarPorLuminosidadeEHora() {
+            // Redirecionar para a página de controle por luminosidade e horário
+            window.location.href = "controle_luminosidade_hora.html";
+        }
+    </script>
+</body>
+
+</html>
