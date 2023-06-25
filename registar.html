@@ -1,34 +1,109 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>Registo</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    
+    <title>Registro</title>
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+}
+
+form {
+    display: inline-block;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 8px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    padding: 8px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+h2 {
+    color: #333;
+}
+
+.error-message {
+    color: red;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 8px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+
+
+    </style>
+     <script>
+        function loginpage() {
+            window.location.href = "login";
+        }
+    </script>
 </head>
-
 <body>
-    <div class="container">
-        <h2>Registo</h2>
-        {% if error_message %}
-        <p class="error-message">{{ error_message }}</p>
-        {% endif %}
-        <form action="/register" method="POST">
-            <div class="form-group">
-                <label for="username">Utilizador:</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-
-            <div class="form-group">
-                <label for="password">Senha:</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-
-            <div class="form-group">
-                <input type="submit" value="Registrar">
-            </div>
-        </form>
-    </div>
+    <h2>Registro</h2>
+    {% if error_message %}
+    <p style="color: red;">{{ error_message }}</p>
+    {% endif %}
+    <form action="/register" method="POST">
+        <label for="username">Utilizador:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        
+        <input type="submit" value="Registrar">
+         <input onclick="loginpage()" type="submit" value="Login" >
+    </form>
+       
 </body>
-
 </html>

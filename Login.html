@@ -1,25 +1,114 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+<title>Login</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+}
+
+form {
+    display: inline-block;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 8px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    padding: 8px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+h2 {
+    color: #333;
+}
+
+.error-message {
+    color: red;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 8px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    padding: 8px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+</style>
+     <script>
+        function loginpage() {
+            window.location.href = "register";
+        }
+    </script>
 </head>
-
 <body>
-    <h2>Login</h2>
-    {% if error_message %}
-    <p class="error-message">{{ error_message }}</p>
-    {% endif %}
-    <form action="/login" method="POST">
-        <label for="username">Utilizador:</label>
-        <input type="text" id="username" name="username" required><br><br>
+<h2>Login</h2>
+{% if error_message %}
+<p style="color: red;">{{ error_message }}</p>
+{% endif %}
+<form action="/login" method="POST">
+<label for="username">Utilizador:</label>
+<input type="text" id="username" name="username" required><br><br>
 
-        <label for="password">Senha:</label>
-        <input type="password" id="password" name="password" required><br><br>
+<label for="password">Senha:</label>
+<input type="password" id="password" name="password" required><br><br>
 
-        <input type="submit" value="Entrar">
-    </form>
+<input type="submit" value="Entrar">
+ <input onclick="loginpage()" type="submit" value="Registar" >
+</form>
 </body>
-
 </html>
