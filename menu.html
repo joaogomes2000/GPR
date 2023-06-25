@@ -12,22 +12,26 @@
         <button onclick="controlarAutomaticamente()">Controlar LED´s Automaticamente por Horário</button>
         <button onclick="controlarPeloSensor()">Controlar LED´s pelo Sensor</button>
         <button onclick="controlarPorLuminosidadeEHora()">Controlar LED´s por Luminosidade e Horário</button>
+        <button onclick="logout()"> terminar sessão </button>
     </div>
 
     <script>
         function controlarAutomaticamente() {
             // Redirecionar para a página de controle automático por horário
-            window.location.href = "controle_automatico.html";
+            window.location.href = "interface";
         }
 
         function controlarPeloSensor() {
             // Redirecionar para a página de controle pelo sensor
-            window.location.href = "controle_sensor.html";
+            window.location.href = "controle_sensor";
         }
 
         function controlarPorLuminosidadeEHora() {
             // Redirecionar para a página de controle por luminosidade e horário
-            window.location.href = "controle_luminosidade_hora.html";
+            window.location.href = "controle_luminosidade_hora";
+        }
+        function logout(){
+            window.location.href ="logout";
         }
     </script>
 </body>
